@@ -6,14 +6,29 @@
 
 :root {
     /* Color - Brand */
-    --color-primary-dark: #32006b;
-    --color-primary: #6400dc;
-    --color-primary-light: #c199f1;
+    --color-primary-darkest: #28065C;
+    --color-primary-darker: #5102B0;
+    --color-primary-dark: #6400DC;
+    --color-primary: #8637FB;
+    --color-primary-light: #DACDFF;
+    --color-primary-lighter: #ECE4FF;
+    --color-primary-lightest: #F4F0FF;
 
-    --color-secondary: #2d9fb2;
+    --color-secondary-darkest: #0C454F;
+    --color-secondary-darker: #0C454F;
+    --color-secondary-dark: #105966;
+    --color-secondary: #107485;
+    --color-secondary-light: #9ED7E0;
+    --color-secondary-lighter: #E2F3F6;
+    --color-secondary-lightest: #E2F3F6;
 
     --color-primary-hover: var(--color-primary-dark);
     --color-primary-selected: var(--color-primary-dark);
+
+    --color-error: #E03131;
+    --color-warning: #E9A100;
+    --color-success: #2A843C;
+    --color-info: #009DD3;
 
     --header-size: 56px;
     --header-size-content: 48px;
@@ -28,7 +43,7 @@
     --font-size-h4: #{scss-functions.px-to-rem(22px)};
     --font-size-h5: #{scss-functions.px-to-rem(20px)};
     --font-size-h6: #{scss-functions.px-to-rem(18px)};
-    
+
     --font-size-base: #{scss-functions.px-to-rem(16px)};
     --font-size-s: #{scss-functions.px-to-rem(14px)};
     --font-size-xs: #{scss-functions.px-to-rem(12px)};
@@ -37,7 +52,7 @@
 
 .highlight-styles,
 .os-dark-mode {
-    
+
     --color-primary-dark: #6400dc;
     --color-primary: #a799ff;
     --color-primary-light: #e2c9ff;

@@ -1,6 +1,6 @@
 :root {
     /* Rocket Generic variable colors */
-    
+
     /* input */
     --color-background-input:               #fff;
     --color-background-input-disabled:      #F1F3F5;
@@ -48,7 +48,7 @@
     --border-radius-none: 0;
     --border-radius-soft: 8px;
     --border-radius-medium: 16px;
-    --border-radius-rounded: 24px;
+    --border-radius-rounded: 100px;
     --border-radius-circle: 100%;
     /* Border Size */
     --border-size-default: var(--border-size-s);
@@ -68,8 +68,8 @@
     --form-element-radius:  var(--border-radius-soft);
     --form-element-border:  var(--border-size-default) solid var(--color-border-input);
     --form-element-text:    var(--color-text-input);
-    
-    
+
+
     /* App Settings */
     --border-radius-content:  var(--border-radius-medium);
     --color-background-login: var(--color-background-body);
@@ -79,7 +79,7 @@
     --header-size-content: 48px;
     --bottom-bar-size: 56px;
     --side-menu-color: var(--color-background-content);
-   
+
 }
 
 .highlight-styles,
@@ -92,10 +92,10 @@
     /* backgrounds */
     --color-background-content:               #272B30;
     --color-background-soft:                  #414141;
-    --color-background-subtle:                #666666;    
+    --color-background-subtle:                #666666;
     --color-background-opacity-soft:          rgba(255, 255, 255, 0.12);
     --color-background-opacity-subtle:        rgba(255, 255, 255, 0.6);
-   
+
     /* text */
     --color-text-main:                        #F1F3F5;
     --color-text-on-contrast:                 #FFFFFF;
@@ -123,7 +123,7 @@
     --focus-shadow: 0 0 0 3px var(--color-border-focus);
     --header-color:                           #212121;
     --side-menu-color: var(--color-background-content);
-    
+
 }
 
 .os-dark-mode .highlight-styles {
@@ -146,7 +146,7 @@
 }
 
 .border-soft {
-   border-color: var(--color-border-soft); 
+   border-color: var(--color-border-soft);
 }
 
 .text-main {

@@ -1,0 +1,17 @@
+.btns-wrapper {
+    align-items: center;
+    display: flex;
+}
+
+.btn {
+    border-radius: var(--border-radius-rounded) !important;
+    font-weight: normal;
+}
+
+.btn-filter {
+    border: none;
+    background-color: rgba(194, 194, 194, 0.336);
+    color: black;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+}

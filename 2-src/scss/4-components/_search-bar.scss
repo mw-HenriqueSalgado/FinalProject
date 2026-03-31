@@ -1,0 +1,35 @@
+.search-bar {
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    margin: 2rem 0 0.5rem 0;
+
+    .input-wrapper {
+        border-bottom: 1px solid lightgrey;
+
+        .input-with-icon .input-with-icon-content-icon, .input-with-icon .input-with-icon-content-icon a {
+            background-color: var(--color-secondary-lighter);
+        }
+    }
+
+    i {
+        color: var(--color-primary);
+        align-self: center;
+    }
+
+    input {
+        float: left;
+        border: none;
+        width: 100%;
+        background: transparent;
+        font-family: var(--font-family-main);
+        position: static;
+        background-color: var(--color-secondary-lighter) !important;
+    }
+
+    &.tablet .form-control[data-input], .phone .form-control[data-input] {
+        font-size: var(--font-size-xs);
+    }
+}
+

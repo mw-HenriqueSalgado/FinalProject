@@ -1,0 +1,22 @@
+body {
+    background-color: var(--color-secondary-lighter);
+}
+/********
+*
+* PAGE DETAILS
+*
+********/
+.top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+
+    &-title {
+        align-items: center;
+        color: var(--color-primary);
+        display: flex;
+        font-size: var(--font-size-h2);
+        margin-left: 0.4rem;
+        opacity: 0.8;
+    }
+}
