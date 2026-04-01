@@ -5,44 +5,32 @@
 .wrapper {
     position: absolute;
     top: 0;
-    right: var(--sidebar-width);
+    right: calc(var(--sidebar-width) - 5.5rem);
     transition: right 330ms ease-out;
 
-    .btn:not([class*="border-radius"]) {
-        border-radius: var(--border-radius-default) var(--border-radius-none)
-            var(--border-radius-none) var(--border-radius-default);
+    .btn-sidebar:not([class*="border-radius"]) {
+        border-radius:
+            var(--border-radius-default)
+            var(--border-radius-none)
+            var(--border-radius-none)
+            var(--border-radius-default);
     }
 
     &.wrapper--is-closed {
-        right: -3rem;
+        right: -8rem;
         transition: right 130ms ease-in;
 
         .sidebar-btn-icon {
             transform: rotate(180deg);
         }
 
-        .btn:not([class*="border-radius"]) {
-            border-radius: var(--border-radius-default)
-                var(--border-radius-none) var(--border-radius-none)
+        .btn-sidebar:not([class*="border-radius"]) {
+            border-radius:
+                var(--border-radius-default)
+                var(--border-radius-none)
+                var(--border-radius-none)
                 var(--border-radius-default);
         }
-    }
-}
-
-.btn-sidebar {
-    align-items: center;
-    background: white;
-    border: none;
-    border-radius: var(--border-radius-default) var(--border-radius-none)
-        var(--border-radius-none) var(--border-radius-default);
-    color: var(--color-primary);
-    display: flex;
-    height: 5rem;
-    justify-content: center;
-    width: 2.5rem;
-
-    .sidebar-btn-icon {
-        transform: rotate(0deg);
     }
 }
 

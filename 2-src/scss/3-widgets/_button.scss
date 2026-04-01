@@ -24,17 +24,16 @@
     background-color: var(--color-primary-lightest);
     border: none;
     color: var(--color-primary);
+
+    &.btn:not([class*="border-radius"]) {
+        border-radius: var(--border-radius-rounded);
+    }
 }
 
 .btn-sidebar {
     align-items: center;
     background: white;
     border: none;
-    border-radius:
-        var(--border-radius-default)
-        var(--border-radius-none)
-        var(--border-radius-none)
-        var(--border-radius-default);
     color: var(--color-primary);
     display: flex;
     height: 5rem;

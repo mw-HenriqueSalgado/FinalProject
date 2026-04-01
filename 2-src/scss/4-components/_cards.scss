@@ -1,0 +1,107 @@
+/******
+*
+*   CARD EMPLOYEE
+*
+******/
+.wrapper-card-employee {
+    background-color: var(--color-neutral-0);
+    border-radius: var(--border-radius-medium);
+
+    .card-employee {
+        &-top {
+            display: flex;
+            margin-bottom: 1rem;
+
+            &-title {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0 1rem;
+
+                .title {
+                    font-size: var(--font-size-base);
+                    font-weight: var(--font-bold);
+                }
+                .subtitle {
+                    color: var(--color-neutral-6);
+                    font-size: var(--font-size-xs);
+                }
+            }
+
+            &-svg {
+                margin-left: auto;
+            }
+        }
+        &-middle {
+            div {
+                margin-bottom: 0.5rem;
+            }
+            > div:first-child {
+                color: var(--color-neutral-8);
+                width: 30vw;
+                margin-bottom: 1rem;
+            }
+
+            > div:not(:first-child) {
+                align-items: center;
+                color: var(--color-neutral-6);
+                display: flex;
+                gap: 5px;
+            }
+        }
+        &-bottom {
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+/******
+*
+*   CARD SIDEBAR EVENT
+*
+******/
+.card-event-match {
+    background-color: #1a79cb;
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--shadow-xl);
+    color: var(--color-neutral-0);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    > :first-child {
+        padding: var(--space-m);
+    }
+
+    .avatar {
+        border: 1px solid var(--color-neutral-0);
+        margin-right: -0.7rem;
+    }
+
+
+
+    .wrapper-match-btn {
+        margin: auto 0 0 auto;
+
+        .btn-match {
+            border: none;
+
+            &.btn:not([class*="border-radius"]) {
+                border-radius: var(--border-radius-medium) var(--border-radius-none)
+                    var(--border-radius-none) var(--border-radius-none);
+            }
+        }
+    }
+
+    .medal-svg {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 0;
+    }
+}
+
+.event-title {
+    font-weight: var(--font-bold);
+    margin-bottom: var(--space-base);
+}
