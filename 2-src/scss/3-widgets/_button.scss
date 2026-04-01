@@ -1,17 +1,44 @@
-.btns-wrapper {
-    align-items: center;
-    display: flex;
-}
-
 .btn {
-    border-radius: var(--border-radius-rounded) !important;
+    border-radius: var(--border-radius-rounded);
     font-weight: normal;
 }
 
+.btns-wrapper {
+    align-items: center;
+    display: flex;
+
+    .btn:not([class*="border-radius"]) {
+        border-radius: var(--border-radius-rounded);
+    }
+}
+
 .btn-filter {
-    border: none;
     background-color: rgba(194, 194, 194, 0.336);
+    border: none;
     color: black;
     margin-right: 0.5rem;
     padding: 0.5rem;
 }
+
+.btn-terciary {
+    background-color: var(--color-primary-lightest);
+    border: none;
+    color: var(--color-primary);
+}
+
+.btn-sidebar {
+    align-items: center;
+    background: white;
+    border: none;
+    border-radius:
+        var(--border-radius-default)
+        var(--border-radius-none)
+        var(--border-radius-none)
+        var(--border-radius-default);
+    color: var(--color-primary);
+    display: flex;
+    height: 5rem;
+    justify-content: center;
+    width: 2.5rem;
+}
+

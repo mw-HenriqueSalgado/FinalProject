@@ -3,26 +3,136 @@
 *   CARD EMPLOYEE
 *
 ******/
-.container-cards {
-    margin: 2rem;
-}
-.container-card {
-    display: flex;
-}
-.card-employee-top {
-    display: flex;
-}
+.card-content {
+    background-color: var(--color-neutral-0);
+    border-radius: var(--border-radius-medium);
 
+    .card-employee {
 
+        &-top {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        &-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 1rem;
+
+            .title {
+                font-size: var(--font-size-base);
+                font-weight: var(--font-bold);
+            }
+            .subtitle {
+                color: var(--color-neutral-6);
+                font-size: var(--font-size-xs);
+            }
+        }
+        &-icon {
+            height: fit-content;
+            margin-left: auto;
+
+            svg {
+
+            }
+        }
+        &-middle {
+
+            div {
+                margin-bottom: 0.5rem;
+            }
+            > div:first-child {
+                color: var(--color-neutral-8);
+                width: 30vw;
+                margin-bottom: 1rem;
+            }
+
+            > div:not(:first-child) {
+                align-items: center;
+                color: var(--color-neutral-6);
+                display: flex;
+                gap: 5px;
+            }
+        }
+        &-bottom {
+            margin-top: 1.5rem;
+        }
+    }
+}
 
 
 
 
 /******
 *
-*   CARD SIDEBAR
+*   CARD SIDEBAR MEDICAL
 *
 ******/
-.card-sidebar {
+.card-medical {
+    align-items: center;
+    border-radius: 20px;
+    background: rgba(173, 216, 230, 0.43);
+    display: flex;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+
+    .info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        text-align: center;
+        width: 100%;
+
+        span:nth-child(-n + 3) {
+            color: rgba(104, 194, 225, 0.681);
+            font-size: var(--font-size-s);
+        }
+        span:nth-child(n + 4) {
+            color: var(--color-blue);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-bold);
+        }
+        span:nth-child(3n + 2) {
+            border-left: 1px solid var(--color-blue-lighter);
+            border-right: 1px solid var(--color-blue-lighter);
+        }
+    }
+}
+
+
+
+/******
+*
+*   CARD SIDEBAR EVENT
+*
+******/
+.card-event {
     border-radius: var(--border-radius-soft);
+
+    &-title {
+        font-weight: var(--font-bold);
+    }
+}
+
+.container-event-desc {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border-bottom: 1px solid var(--color-blue-lighter);
+}
+
+.container-event-desc span:nth-child(-n + 1) {
+    padding-bottom: 1rem;
+    font-weight: var(--font-bold);
+}
+.container-event-desc span:nth-child(3) {
+    padding-bottom: 0.5rem;
+}
+
+.container-team {
+    margin: 0.5rem 0;
+}
+
+.event-btn {
+    background-image: url(../medal.svg?abwI1bPcwm3RVWPCv6Jf5g);
 }

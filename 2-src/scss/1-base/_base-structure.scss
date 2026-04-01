@@ -25,6 +25,8 @@
     --color-primary-hover: var(--color-primary-dark);
     --color-primary-selected: var(--color-primary-dark);
 
+    --color-background-main: #F2F9FF;
+
     --color-error: #E03131;
     --color-warning: #E9A100;
     --color-success: #2A843C;
@@ -34,6 +36,8 @@
     --header-size-content: 48px;
     --side-menu-size: 280px;
 
+
+    --font-bold: 500;
 
     --font-size-display: #{scss-functions.px-to-rem(36px)};
 
