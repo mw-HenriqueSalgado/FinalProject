@@ -16,6 +16,10 @@
     i {
         align-self: center;
         color: var(--color-primary);
+
+        .os-dark-mode & {
+            color: var(--color-primary-lighter);
+        }
     }
 
     input {

@@ -1,23 +1,19 @@
 .btn {
     border-radius: var(--border-radius-rounded);
     font-weight: normal;
-}
 
-.btns-wrapper {
-    align-items: center;
-    display: flex;
-
-    .btn:not([class*="border-radius"]) {
-        border-radius: var(--border-radius-rounded);
+    &.btn-primary {
+        .os-dark-mode & {
+            background-color: var(--color-primary-lighter);
+            border: none;
+        }
     }
 }
 
-.btn-filter {
-    background-color: rgba(194, 194, 194, 0.336);
-    border: none;
-    color: black;
-    margin-right: 0.5rem;
-    padding: 0.5rem;
+.btn-secondary {
+    .os-dark-mode & {
+        color: var(--color-primary-lighter);
+    }
 }
 
 .btn-terciary {
@@ -30,14 +26,37 @@
     }
 }
 
+.top-wrapper-btns {
+    align-items: center;
+    display: flex;
+
+    .btn:not([class*="border-radius"]) {
+        border-radius: var(--border-radius-rounded);
+    }
+}
+
+.btn-filter {
+    background-color: rgba(194, 194, 194, 0.336);
+    border: none;
+    color: var(--color-neutral-10);
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+}
+
 .btn-sidebar {
     align-items: center;
     background: white;
     border: none;
+    box-shadow: var(--shadow-l);
     color: var(--color-primary);
     display: flex;
     height: 5rem;
     justify-content: center;
     width: 2.5rem;
+
+    .os-dark-mode & {
+        color: var(--color-neutral-10);
+        background-color: var(--color-background-body);
+    }
 }
 

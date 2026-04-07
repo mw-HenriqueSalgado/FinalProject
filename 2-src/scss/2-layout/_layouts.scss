@@ -1,24 +1,28 @@
 body {
     background-color: var(--color-background-content);
+    .os-dark-mode &{
+        background-color: var(--color-background-body);
+    }
 }
 .layout.layout-side .main {
     background-color: var(--color-background-main);
-    border-radius:
-        var(--border-radius-none)
-        var(--border-radius-default)
-        var(--border-radius-default)
-        var(--border-radius-none);
+    border-radius: var(--border-radius-none) var(--border-radius-default)
+        var(--border-radius-default) var(--border-radius-none);
     margin-left: unset;
     padding-left: var(--side-menu-size);
 
     &.main-content--is-collapsed {
-        --_expanded-width: calc( var(--page-size) - var(--sidebar-size) );
+        --_expanded-width: calc(var(--page-size) - var(--sidebar-size));
         transition: max-width 330ms ease-out;
         max-width: var(--_expanded-width);
     }
     &.main-content--is-expanded {
         max-width: var(--page-size);
         transition: max-width 130ms ease-in;
+    }
+
+    .os-dark-mode &{
+        background-color: var(--color-background-main);
     }
 }
 /********
@@ -39,6 +43,10 @@ body {
         font-size: var(--font-size-h2);
         margin-left: 0.4rem;
         opacity: 0.8;
+
+        .os-dark-mode & {
+            color: var(--color-primary-lighter);
+        }
     }
 }
 
@@ -106,8 +114,12 @@ body {
     }
     &-icon {
         align-self: center;
-        color: black;
+        color: var(--color-neutral-0);
         margin-left: auto;
+
+        .os-dark-mode & {
+            color: var(--color-neutral-10);
+        }
     }
 }
 
@@ -140,8 +152,15 @@ body {
                     &:hover {
                         .icon-wrapper {
                             background-color: var(--color-violet-darker);
+
+                            .os-dark-mode & {
+                                background-color: #6620B9;
+                            }
                         }
                     }
+                    .os-dark-mode & {
+                                background-color: var(--color-primary--darker);
+                            }
                 }
 
                 .icon-wrapper {
@@ -171,6 +190,10 @@ body {
                     }
                 }
             }
+
+            .os-dark-mode & {
+                background-color: var(--color-primary-darker);
+            }
         }
 
         .app-menu-content--is-collapsed {
@@ -184,7 +207,9 @@ body {
         .app-menu-content--is-expanded {
             .header-logo {
                 .svg-logo {
-                    opacity: 1;
+                    &.show {
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -199,6 +224,12 @@ body {
         .sidemenu-header {
             gap: 10px;
 
+            .btn-menu {
+                .os-dark-mode & {
+                    background-color: var(--color-primary-darker);
+                    color: var(--color-neutral-10);
+                }
+            }
             .svg-logo {
                 opacity: 0;
                 transition: opacity 500ms;
