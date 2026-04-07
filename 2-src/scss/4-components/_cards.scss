@@ -1,6 +1,12 @@
-.event-title {
+.ThemeGrid_MarginGutter {
+    margin: 0;
+}
+.card-event-title {
     font-weight: var(--font-bold);
     margin-bottom: var(--space-base);
+}
+.card-event-separator {
+    width: 15vw;
 }
 
 /******
@@ -43,7 +49,6 @@
             }
             > div:first-child {
                 color: var(--color-neutral-8);
-                width: 30vw;
                 margin-bottom: 1rem;
             }
 
@@ -74,9 +79,12 @@
     position: relative;
     overflow: hidden;
 
-    .event-separator {
-        z-index: 1;
-        width: 20vw;
+    .event-content {
+
+        &-top {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     > :first-child {
@@ -105,7 +113,6 @@
         position: absolute;
         right: 0;
         top: 0;
-        z-index: 0;
     }
 }
 
@@ -124,24 +131,69 @@
     position: relative;
     overflow: hidden;
 
-    a {
-        color: var(--color-info);
-    }
+    .event-content {
+        z-index: 1;
 
-    .event-time {
-        color: var(--color-primary-darkest);
-    }
-    .event-person{
-        color: var(--color-primary-darker);
-    }
-    .event-separator {
-        width: 15vw;
+        &-title {
+            color: var(--color-primary-darkest);
+        }
+        &-top{
+            color: var(--color-primary-darker);
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            color: var(--color-info);
+        }
     }
 
     .caduceus-svg {
         position: absolute;
         right: 0;
-        top: 0;
-        z-index: 0;
+        top: 68px;
+    }
+}
+
+
+/******
+*
+*   CARD SIDEBAR WORKOUT
+*
+******/
+.card-event-workout {
+    background-color: #E8F1F9;
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--shadow-xl);
+    color: var(--color-neutral-10);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    > :first-child {
+        padding: var(--space-m);
+    }
+
+    .event-content {
+        z-index: 1;
+
+        &-title {
+            color: var(--color-primary-darkest);
+        }
+        &-top{
+            color: var(--color-primary-darker);
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            color: var(--color-info);
+        }
+    }
+
+    .lotus-svg {
+        position: absolute;
+        right: 0;
+        top: 55px;
     }
 }

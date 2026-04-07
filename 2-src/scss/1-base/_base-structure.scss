@@ -34,8 +34,10 @@
 
     --header-size: 56px;
     --header-size-content: 48px;
-    --side-menu-size: 280px;
-
+    --side-menu-size: 112px;
+    --page-size: 1920px;
+    --sidebar-size: 500px;
+    --expanded-width: calc( var(--page-size) -(var(--sidebar-size)) );
 
     --font-bold: 500;
 
