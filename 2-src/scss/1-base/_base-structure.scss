@@ -54,6 +54,8 @@
     --font-size-s: #{scss-functions.px-to-rem(14px)};
     --font-size-xs: #{scss-functions.px-to-rem(12px)};
     --font-size-label: #{scss-functions.px-to-rem(11px)};
+
+    --shadow-table: 0 2px 0px rgb(0 0 0 / 6%);
 }
 
 .highlight-styles,
@@ -75,7 +77,7 @@
     --color-neutral-9: #F8F9FA;
     --color-neutral-10: #fff;
 
-     --header-color: var(--color-neutral-3);
+    --header-color: var(--color-neutral-3);
 
     color: var(--color-neutral-9);
 }
