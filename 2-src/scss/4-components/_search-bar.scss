@@ -7,13 +7,14 @@
 
     .input-wrapper {
         border-bottom: 1px solid lightgrey;
+        width: 25vw;
 
         .input-with-icon .input-with-icon-content-icon, .input-with-icon .input-with-icon-content-icon a {
             background-color: var(--color-background-main);
         }
     }
 
-    i {
+    .icon-search {
         align-self: center;
         color: var(--color-primary);
 

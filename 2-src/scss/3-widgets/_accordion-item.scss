@@ -1,0 +1,22 @@
+.wrapper-accordion-item {
+    margin-top: var(--space-m);
+
+    .personal-details-content {
+        color: var(--color-info);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-base);
+        margin: var(--space-base) 0;
+
+        span {
+            margin-left: var(--space-xs);
+        }
+    }
+    .bio-content {
+        margin-top: var(--space-base);
+    }
+    .experience {
+        margin-top: var(--space-l);
+    }
+}
+

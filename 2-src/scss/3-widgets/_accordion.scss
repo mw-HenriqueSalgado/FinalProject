@@ -1,0 +1,135 @@
+.osui-accordion {
+    :last-child:not(.list) {
+        > .osui-accordion-item {
+            border: none;
+            border-radius: var(--border-radius-medium);
+            box-shadow: var(--shadow-xs);
+            margin-bottom: var(--space-s);
+        }
+    }
+
+    .list {
+        :last-child {
+            > .osui-accordion-item {
+                border: none;
+                border-radius: var(--border-radius-medium);
+                box-shadow: var(--shadow-xs);
+                margin-bottom: var(--space-s);
+            }
+        }
+    }
+
+    &-item {
+        &__title {
+            border-radius: var(--border-radius-medium);
+            padding: var(--space-base);
+
+            &:hover {
+                background-color: var(--color-neutral-3);
+            }
+        }
+        &--is-open {
+            &::after {
+                border-color: transparent;
+            }
+            > .osui-accordion-item__title {
+                font-weight: var(--font-regular);
+            }
+            .osui-accordion-item__title {
+                background-color: var(--color-neutral-3);
+
+                &__placeholder {
+                    .accordion {
+                        &-actions {
+                            .active {
+                                background-color: var(--color-success);
+                                color: var(--color-neutral-0);
+                            }
+                            .inactive {
+                                background-color: var(--color-error);
+                                color: var(--color-neutral-0);
+                            }
+                        }
+                    }
+                }
+            }
+            :last-child:not(.list) {
+                > .osui-accordion-item {
+                    border: none;
+                    border-radius: var(--border-radius-medium);
+                    box-shadow: var(--shadow-xs);
+                    margin-bottom: var(--space-s);
+                }
+            }
+
+            .list {
+                :last-child {
+                    > .osui-accordion-item {
+                        border: none;
+                        border-radius: var(--border-radius-medium);
+                        box-shadow: var(--shadow-xs);
+                        margin-bottom: var(--space-s);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sort-list {
+    display: flex;
+    margin-bottom: var(--space-s);
+
+    &-name {
+        width: 29.1%;
+    }
+    &-job,&-city {
+        width: 28.2%;
+    }
+}
+
+.accordion {
+    --_space-column: 29%;
+    align-items: center;
+    display: flex;
+
+    > div:not(:first-child) {
+        font-size: var(--font-size-s);
+    }
+
+    &-name {
+        display: flex;
+        gap: var(--space-m);
+        width: var(--_space-column);
+
+        span {
+            align-content: center;
+            font-size: var(--font-size-base);
+            margin: 0;
+        }
+    }
+    &-job,
+    &-city {
+        width: var(--_space-column);
+    }
+    &-status {
+        justify-self: center;
+        width: fit-content;
+
+        .active {
+            background-color: var(--color-background-main);
+            border-radius: var(--border-radius-default);
+            color: var(--color-success);
+            padding: var(--space-xs) var(--space-s) var(--space-xs)
+                var(--space-s);
+        }
+        .inactive {
+            background-color: var(--color-background-main);
+            border-radius: var(--border-radius-default);
+            color: var(--color-error);
+            padding: var(--space-xs) var(--space-s) var(--space-xs)
+                var(--space-s);
+        }
+    }
+}
+
