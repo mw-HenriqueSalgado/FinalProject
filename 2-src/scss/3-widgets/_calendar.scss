@@ -1,0 +1,67 @@
+.wrapper {
+    &-month {
+    }
+    &-weekday {
+        flex-direction: row;
+        gap: 12px;
+        margin-top: var(--space-base);
+
+        .scrollable-area-content & {
+            display: flex;
+        }
+    }
+}
+
+.calendar {
+    &-wrapper {
+        position: relative;
+
+        &--overlay {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255 255 255 / 0%) 70%, rgb(255 255 255) 100%);
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            pointer-events: none;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+    }
+    
+    &-weekday {
+        --_week-color: #1666ac;
+        --_weekday-background-color: #1a79cb;
+        cursor: pointer;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        gap: var(--space-s);
+        padding: var(--space-base) var(--space-s);
+        width: fit-content;
+        z-index: 0;
+
+        &--is-selected {
+            border-radius: var(--border-radius-rounded);
+            background-color: var(--_weekday-background-color);
+
+            span {
+                color: var(--color-neutral-0) !important;
+            }
+        }
+
+        span {
+            align-self: center;
+            margin: 0;
+
+            &:first-child {
+                color: var(--_week-color);
+                font-size: var(--font-size-base);
+            }
+            &:last-child {
+                color: var(--color-neutral-7);
+                font-weight: var(--font-bold);
+            }
+        }
+    }
+}
+
