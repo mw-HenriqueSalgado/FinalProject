@@ -39,8 +39,19 @@
                 }
             }
 
-            &-svg {
+            &-icon {
                 margin-left: auto;
+
+                button {
+                    border: none;
+
+                    &:hover {
+                        filter: brightness(1);
+                    }
+                    i {
+                        color: var(--color-neutral-5);
+                    }
+                }
             }
         }
         &-middle {
@@ -64,7 +75,7 @@
         }
     }
 
-    .os-dark-mode &{
+    .os-dark-mode & {
         background-color: var(--color-background-body);
     }
 }
@@ -115,8 +126,9 @@
             border: none;
 
             &.btn:not([class*="border-radius"]) {
-                border-radius: var(--border-radius-medium) var(--border-radius-none)
-                    var(--border-radius-none) var(--border-radius-none);
+                border-radius: var(--border-radius-medium)
+                    var(--border-radius-none) var(--border-radius-none)
+                    var(--border-radius-none);
             }
 
             .os-dark-mode & {
@@ -138,7 +150,7 @@
 *
 ******/
 .card-event-doctor {
-    background-color: #E8F1F9;
+    background-color: #e8f1f9;
     border-radius: var(--border-radius-medium);
     box-shadow: var(--shadow-xl);
     color: var(--color-neutral-10);
@@ -153,7 +165,7 @@
         &-title {
             color: var(--color-primary-darkest);
         }
-        &-top{
+        &-top {
             color: var(--color-primary-darker);
             display: flex;
             flex-direction: column;
@@ -171,14 +183,13 @@
     }
 }
 
-
 /******
 *
 *   CARD SIDEBAR WORKOUT
 *
 ******/
 .card-event-workout {
-    background-color: #E8F1F9;
+    background-color: #e8f1f9;
     border-radius: var(--border-radius-medium);
     box-shadow: var(--shadow-xl);
     color: var(--color-neutral-10);
@@ -196,7 +207,7 @@
         &-title {
             color: var(--color-primary-darkest);
         }
-        &-top{
+        &-top {
             color: var(--color-primary-darker);
             display: flex;
             flex-direction: column;
@@ -211,5 +222,94 @@
         position: absolute;
         right: 0;
         top: 55px;
+    }
+}
+
+/******
+*
+*   CARD EMPLOYEE DETAILS
+*
+******/
+.employee-details {
+    &-top {
+        display: flex;
+        margin-bottom: 1rem;
+
+        &-avatar {
+            .avatar {
+                border-radius: var(--border-radius-medium);
+                height: calc(var(--space-xl) * 3);
+                width: calc(var(--space-xl) * 3);
+            }
+        }
+
+        &-title {
+            display: flex;
+            flex-direction: column;
+            font-weight: var(--font-bold);
+            justify-content: center;
+            gap: var(--space-base);
+            margin: 0 1rem;
+
+            .title-top {
+                font-size: var(--font-size-base);
+            }
+            .title-middle {
+                color: var(--color-neutral-6);
+                display: flex;
+                font-size: var(--font-size-s);
+                gap: var(--space-s);
+            }
+            .title-bottom {
+                color: var(--color-neutral-7);
+                font-size: var(--font-size-s);
+            }
+        }
+
+        &-right {
+            margin-left: auto;
+
+            .wrapper {
+                &-progressbar {
+                    margin-top: var(--space-l);
+                    font-weight: var(--font-bold);
+
+                    &-content{
+                        display: flex;
+                        gap: var(--space-s);
+                    }
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
+        margin: var(--space-s) var(--space-base) 0 0;
+
+        .wrapper-details-bottom {
+            display: flex;
+            gap: var(--space-s);
+
+            i {
+                color: var(--color-neutral-5);
+                font-size: var(--space-l);
+            }
+
+            &-content {
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    font-weight: var(--font-bold);
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .os-dark-mode & {
+        background-color: var(--color-background-body);
     }
 }

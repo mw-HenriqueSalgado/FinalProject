@@ -1,7 +1,7 @@
 body {
     background-color: var(--color-background-content);
     font-family: "Raleway", sans-serif;
-    .os-dark-mode &{
+    .os-dark-mode & {
         background-color: var(--color-background-body);
     }
 }
@@ -22,7 +22,7 @@ body {
         transition: max-width 130ms ease-in;
     }
 
-    .os-dark-mode &{
+    .os-dark-mode & {
         background-color: var(--color-background-main);
     }
 }
@@ -45,6 +45,16 @@ body {
         margin-left: 0.4rem;
         opacity: 0.8;
 
+        button {
+            background: transparent;
+            border: none;
+            padding: 0;
+
+            &:hover {
+                -webkit-filter: brightness(1);
+                filter: brightness(1);
+            }
+        }
         .os-dark-mode & {
             color: var(--color-primary-lighter);
         }
@@ -155,13 +165,18 @@ body {
                             background-color: var(--color-violet-darker);
 
                             .os-dark-mode & {
-                                background-color: #6620B9;
+                                background-color: #6620b9;
                             }
                         }
                     }
+
+                    &.active:hover {
+                        background: transparent;
+                        color: var(--color-neutral-0);
+                    }
                     .os-dark-mode & {
-                                background-color: var(--color-primary--darker);
-                            }
+                        background-color: var(--color-primary--darker);
+                    }
                 }
 
                 .icon-wrapper {

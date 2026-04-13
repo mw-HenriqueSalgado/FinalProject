@@ -3,13 +3,19 @@
     font-weight: normal;
 
     &.btn-primary {
+        &.btn:not([class*="border-radius"]) {
+            border-radius: var(--border-radius-rounded);
+        }
         .os-dark-mode & {
             background-color: var(--color-primary-lighter);
             border: none;
         }
     }
 
-    &-secondary {
+    &.btn-secondary {
+        &.btn:not([class*="border-radius"]) {
+            border-radius: var(--border-radius-rounded);
+        }
         .os-dark-mode & {
             color: var(--color-primary-lighter);
         }
