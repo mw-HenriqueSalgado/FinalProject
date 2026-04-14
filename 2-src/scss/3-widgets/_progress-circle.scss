@@ -1,0 +1,22 @@
+.osui-progress-circle__content {
+    transform: translate(15%, -50%);
+}
+
+.wrapper-circle {
+    justify-self: center;
+
+    &-value {
+        align-items: center;
+        border-radius: var(--border-radius-rounded);
+        background: #d96a6a;
+        display: flex;
+        height: 60px;
+        justify-content: center;
+        width: 60px;
+
+        span {
+            font-weight: var(--font-bold);
+        }
+    }
+}
+
