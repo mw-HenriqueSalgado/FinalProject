@@ -1,0 +1,16 @@
+.wrapper {
+    &-progressbar {
+        margin-top: var(--space-l);
+        font-weight: var(--font-bold);
+
+        &-content {
+            display: flex;
+            gap: var(--space-s);
+
+            .bar {
+                width: 100%;
+                align-self: center;
+            }
+        }
+    }
+}

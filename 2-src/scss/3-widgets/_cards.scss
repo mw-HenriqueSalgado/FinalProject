@@ -46,19 +46,39 @@
 ******/
 .wrapper {
     &-cards-top {
+        --_cards-height: 260px;
         color: var(--color-neutral-0);
         margin: var(--space-xxl) 0 var(--space-l) 0;
 
         &-first {
             background-color: #5fa1da;
             border: none;
-            min-height: 220px;
+            min-height: var(--_cards-height);
+            padding: var(--space-l);
+
+            .wrapper-chart-column {
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-xs);
+
+                span {
+                    margin: 0;
+                }
+
+                &-subtitle {
+                    font-size: var(--font-size-base);
+                    font-weight: var(--font-bold);
+                }
+            }
         }
         &-second {
             background-color: #c5b5f5;
             border: none;
-            min-height: 220px;
-            padding: var(--space-xl) var(--space-l);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: var(--_cards-height);
+            padding: 0 var(--space-xl);
 
             .wrapper {
                 &-title {
@@ -84,7 +104,7 @@
         &-third {
             background-color: #eeadc4;
             border: none;
-            min-height: 220px;
+            min-height: var(--_cards-height);
             padding: var(--space-l);
 
             &:first-child {
@@ -94,39 +114,62 @@
     }
 
     &-cards-middle {
+        --_color-title: #85a5c2;
+        --_color-content: #59748a;
         margin-bottom: var(--space-base);
 
-        &-first {
-            border: none;
-        }
+        &-first,
         &-second {
             border: none;
+
+            .wrapper-chart-line {
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-s);
+                margin-bottom: var(--space-base);
+
+                span {
+                    margin: 0;
+                }
+
+                &-title {
+                    color: var(--_color-title);
+                    font-size: var(--font-size-base);
+                }
+                &-subtitle {
+                    color: var(--_color-content);
+                    font-weight: var(--font-bold);
+                }
+            }
         }
     }
 
     &-cards-bottom {
-        --_color-title: #85A5C2;
-        --_color-content: #59748A;
+        --_color-title: #85a5c2;
+        --_color-content: #59748a;
         font-size: var(--font-size-base);
 
-        &-first {
-            border: none;
-        }
+        &-first,
         &-second {
             border: none;
         }
 
-        .wrapper-title {
-            display: flex;
-
+        .wrapper {
             &-name {
                 color: var(--_color-title);
-                padding: 0 var(--space-base);
-                max-width: 17%;
+                margin-bottom: var(--space-base);
+                text-align: center;
             }
             &-result {
                 color: var(--_color-content);
                 font-weight: var(--font-bold);
+                margin-bottom: var(--space-base);
+                text-align: center;
+            }
+            &-empty {
+                color: transparent;
+                margin-bottom: var(--space-base);
+                text-align: center;
             }
         }
 

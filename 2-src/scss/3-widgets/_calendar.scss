@@ -74,19 +74,34 @@
             span {
                 color: var(--color-neutral-0) !important;
             }
+
+            .calendar-weekday-day {
+                i {
+                    color: var(--color-neutral-0);
+                }
+            }
         }
 
-        span {
+        &-week {
             align-self: center;
+            color: var(--_week-color);
+            font-size: var(--font-size-base);
+            margin: 0;
+        }
+        &-day {
+            align-self: center;
+            color: var(--color-neutral-7);
+            font-weight: var(--font-bold);
             margin: 0;
 
-            &:first-child {
-                color: var(--_week-color);
-                font-size: var(--font-size-base);
-            }
-            &:last-child {
-                color: var(--color-neutral-7);
-                font-weight: var(--font-bold);
+            i {
+                color: transparent;
+                position: absolute;
+                transform: translate3d(12px, -10px, 10px);
+
+                &.fa {
+                    font-size: 8px;
+                }
             }
         }
     }

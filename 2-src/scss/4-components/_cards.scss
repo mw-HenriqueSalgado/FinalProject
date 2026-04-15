@@ -1,12 +1,51 @@
 .ThemeGrid_MarginGutter {
     margin: 0;
 }
-.card-event-title {
-    font-weight: var(--font-bold);
-    margin-bottom: var(--space-base);
-}
-.card-event-separator {
-    width: 15vw;
+.card {
+    &-event {
+        &-title {
+            font-weight: var(--font-bold);
+            margin-bottom: var(--space-base);
+        }
+        &-separator {
+            width: 15vw;
+        }
+    }
+    &.card {
+        &-sidebar {
+            --_background-match: var(--color-blue);
+            --_background-health: #f4faff;
+            --_background-workout: #f1f9ff;
+            border: none;
+            border-radius: var(--border-radius-medium);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            overflow: hidden;
+
+            &.card--sidebar__match {
+                background-color: var(--_background-match);
+            }
+            &.card--sidebar__health {
+                background-color: var(--_background-health);
+            }
+            &.card--sidebar__workout {
+                background-color: var(--_background-workout);
+            }
+
+            .card-sidebar {
+                &-content {
+                    position: relative;
+                    z-index: 2;
+                }
+                &-svg {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 1;
+                }
+            }
+        }
+    }
 }
 
 /******
@@ -80,149 +119,122 @@
     }
 }
 
-/******
-*
-*   CARD SIDEBAR MATCH
-*
-******/
-.card-event-match {
-    background-color: #1a79cb;
-    border-radius: var(--border-radius-medium);
-    box-shadow: var(--shadow-xl);
-    color: var(--color-neutral-0);
-    display: flex;
-    position: relative;
-    overflow: hidden;
-
-    .event-content {
-        &-top {
+.card-event {
+    /******
+    *
+    *   CARD SIDEBAR MATCH
+    *
+    ******/
+    &-match {
+        color: var(--color-neutral-0);
+        &-subtitle {
             display: flex;
             flex-direction: column;
+            gap: var(--space-xs);
+
+            span {
+                margin: 0;
+            }
         }
+
         .os-dark-mode & {
             color: var(--color-neutral-10);
         }
-    }
 
-    > :first-child {
-        padding: var(--space-m);
-    }
+        .wrapper-match-btn {
+            bottom: 0;
+            position: absolute;
+            right: 0;
 
-    .avatar {
-        border: 1px solid var(--color-neutral-0);
-        margin-right: -0.7rem;
+            .btn-match {
+                border: none;
 
-        .os-dark-mode & {
-            border: 1px solid var(--color-neutral-10);
-        }
-    }
+                &.btn:not([class*="border-radius"]) {
+                    border-radius: var(--border-radius-medium)
+                        var(--border-radius-none) var(--border-radius-none)
+                        var(--border-radius-none);
+                }
 
-    .wrapper-match-btn {
-        bottom: 0;
-        position: absolute;
-        right: 0;
-
-        .btn-match {
-            border: none;
-
-            &.btn:not([class*="border-radius"]) {
-                border-radius: var(--border-radius-medium)
-                    var(--border-radius-none) var(--border-radius-none)
-                    var(--border-radius-none);
+                .os-dark-mode & {
+                    background-color: var(--color-neutral-10);
+                }
             }
+
+            .medal-svg {
+                margin-right: 2.5rem;
+            }
+        }
+
+        .avatar {
+            border: 1px solid var(--color-neutral-0);
+            margin-right: -0.7rem;
 
             .os-dark-mode & {
-                background-color: var(--color-neutral-10);
+                border: 1px solid var(--color-neutral-10);
             }
         }
     }
 
-    .medal-svg {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-}
+    /******
+    *
+    *   CARD SIDEBAR DOCTOR
+    *
+    ******/
 
-/******
-*
-*   CARD SIDEBAR DOCTOR
-*
-******/
-.card-event-doctor {
-    background-color: #e8f1f9;
-    border-radius: var(--border-radius-medium);
-    box-shadow: var(--shadow-xl);
-    color: var(--color-neutral-10);
-    display: flex;
-    padding: var(--space-m);
-    position: relative;
-    overflow: hidden;
-
-    .event-content {
-        z-index: 1;
-
+    &-doctor {
         &-title {
             color: var(--color-primary-darkest);
         }
-        &-top {
+        &-subtitle {
             color: var(--color-primary-darker);
             display: flex;
             flex-direction: column;
+            gap: var(--space-s);
+
+            span {
+                margin: 0;
+            }
         }
 
         a {
             color: var(--color-info);
+            margin-left: var(--space-s);
+        }
+
+        .caduceus-svg {
+            position: absolute;
+            right: 0;
+            top: 75px;
         }
     }
 
-    .caduceus-svg {
-        position: absolute;
-        right: 0;
-        top: 68px;
-    }
-}
-
-/******
-*
-*   CARD SIDEBAR WORKOUT
-*
-******/
-.card-event-workout {
-    background-color: #e8f1f9;
-    border-radius: var(--border-radius-medium);
-    box-shadow: var(--shadow-xl);
-    color: var(--color-neutral-10);
-    display: flex;
-    position: relative;
-    overflow: hidden;
-
-    > :first-child {
-        padding: var(--space-m);
-    }
-
-    .event-content {
-        z-index: 1;
-
+    /******
+    *
+    *   CARD SIDEBAR WORKOUT
+    *
+    ******/
+    &-workout {
         &-title {
             color: var(--color-primary-darkest);
         }
-        &-top {
+        &-subtitle {
             color: var(--color-primary-darker);
             display: flex;
             flex-direction: column;
+            gap: var(--space-s);
+
+            span {
+                margin: 0;
+            }
         }
 
-        a {
-            color: var(--color-info);
+        .lotus-svg {
+            position: absolute;
+            right: 0;
+            top: 65px;
         }
     }
 
-    .lotus-svg {
-        position: absolute;
-        right: 0;
-        top: 55px;
-    }
 }
 
 /******
@@ -268,18 +280,6 @@
 
         &-right {
             margin-left: auto;
-
-            .wrapper {
-                &-progressbar {
-                    margin-top: var(--space-l);
-                    font-weight: var(--font-bold);
-
-                    &-content{
-                        display: flex;
-                        gap: var(--space-s);
-                    }
-                }
-            }
         }
     }
 
